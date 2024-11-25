@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Exiled.API.Enums;
 using Exiled.API.Features;
+using Exiled.Events.EventArgs.Player;
 using Exiled.Events.EventArgs.Server;
 using Exiled.Events.Handlers;
 using Player = Exiled.Events.Handlers.Player;
@@ -20,6 +21,8 @@ namespace teslagate
         public override Version Version => new Version(1, 0, 0);
 
         public EventHandlers EventHandler;
+
+        
         public override void OnEnabled()
         {
             EventHandler = new EventHandlers();
@@ -31,8 +34,10 @@ namespace teslagate
             // Don't forget, events must be disconnected and nullified on the disable method.
             Player.TriggeringTesla -= EventHandler.TriggeringTesla;
             EventHandler = null;
-        }
 
+        }
+        
+        
 
 
     }

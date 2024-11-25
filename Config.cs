@@ -13,5 +13,7 @@ namespace teslagate
 
         public bool Debug { get; set; } = false;
 
+        
+
     }
 }
