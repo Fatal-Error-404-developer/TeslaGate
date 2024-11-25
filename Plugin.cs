@@ -31,7 +31,7 @@ namespace teslagate
 
         public override void OnDisabled()
         {
-            // Don't forget, events must be disconnected and nullified on the disable method.
+            
             Player.TriggeringTesla -= EventHandler.TriggeringTesla;
             EventHandler = null;
 
